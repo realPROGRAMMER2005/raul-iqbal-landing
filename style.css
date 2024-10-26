@@ -13,6 +13,8 @@
 
 
 
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #212121;
@@ -78,7 +80,11 @@ html {
 }
 
 .nav {
-  position: sticky;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 
