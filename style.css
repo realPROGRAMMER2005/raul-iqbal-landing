@@ -1,20 +1,56 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;  
   text-decoration: none;
   list-style: none;
+  outline: none;
+  border: none;
 }
+
+
+
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #212121;
   color: white;
+  font-size: 1rem;
 
 }
 
+
+
+
 html {
   font-size: 18px;
+}
+
+.text {
+  font-size: 1rem;
+  color: #B0ADAD;
+  margin: 0.5rem 0;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.suptitle {
+  font-size: 1.3rem;
+  color: #4C70EF
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #558FFF;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .wrapper {
@@ -65,13 +101,233 @@ html {
   font-weight: 700;
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .hero__subtitle {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .hero__media {
   display: flex;
   gap: 1.5rem;
+
+}
+
+.hero__media-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.about__inner {
+  margin-top: 7.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+
+}
+
+.about__image {
+  min-width: 25rem;
+  height: 20rem;
+  border: 2px solid white;
+  border-bottom-right-radius: 2rem;
+  position: relative;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: -1.5rem;
+  top: -1.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  
+}
+
+
+.what-i-do__inner {
+  margin-top: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.what-i-do__skills {
+  display: flex;
+  gap: 2rem;
+}
+
+.what-i-do__title {
+  margin-bottom: 1.7rem;
+}
+
+.skill-card {
+  background-color: #292C36;
+  border-radius: 0.6rem;
+}
+
+.skill-card__upper {
+  margin-top: 1.5rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+  display: flex;
+  align-items: center;
+  max-width: 9.7rem;
+  margin-bottom: 1.7rem;
+}
+
+.skill-card__title {
+  margin-left: 0.5rem;
+}
+
+.skill-card__text {
+  margin-bottom: 1.5rem;
+  margin-inline: 1.3rem;
+  margin-top: 1.7rem;
+}
+
+.skill-card__img {
+  display: flex;
+  align-items: center;
+}
+
+
+.portfolio__inner {
+  margin-top: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-card {
+  background-color: #292C36;
+  border-radius: 1rem;
+  overflow: hidden;
+
+}
+
+.portfolio-card__image {
+  width: 21rem;
+  height: 15rem;
+
+}
+
+.portfolio-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.portfolio-card__content {
+  padding: 1rem;
+}
+
+.portfolio__title {
+  margin-bottom: 2rem;
+}
+
+.portfolio-card__title {
+  margin-bottom: 0.4rem;
+}
+
+
+.portfolio__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+
+.contact__inner {
+  margin-top: 7.5rem;
+}
+
+.contact-card {
+  background-color: #292C36;
+  border-radius: 1rem;
+  max-width: 980px;
+  margin: 0 auto;
+  
+}
+
+.contact-card__inner {
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card__title {
+  margin-bottom: 1.7rem;
+  text-align: center;
+}
+
+.footer {
+  margin-top: 7.5rem;
+  background-color: #292C36;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 16px;
+  }
+
+  .about__inner {
+    flex-direction: column-reverse;
+  }
+  
+}
+
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .what-i-do__skills {
+    flex-direction: column;
+  }
+
+  .portfolio__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+
+
+    .portfolio__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+  
+  
 }
